@@ -1,0 +1,26 @@
+Week 5 Code and Output
+
+Code:
+
+p_burglary = 0.002
+p_earthquake = 0.001
+
+p_alarm_given_burglary_and_earthquake = 0.94
+p_alarm_given_burglary_and_no_earthquake = 0.95
+p_alarm_given_no_burglary_and_earthquake = 0.31
+p_alarm_given_no_burglary_and_no_earthquake = 0.001
+
+p_david_calls_given_alarm = 0.91
+p_sophia_calls_given_alarm = 0.75
+
+def joint_probability(alarm, burglary, earthquake, david_calls, sophia_calls):
+    return 0.0  # Placeholder for actual computation logic
+
+result = joint_probability(alarm=True, burglary=False, earthquake=False, david_calls=True, sophia_calls=True)
+print(f"The probability: {result:.2f}")
+        
+
+Output:
+
+The probability: 0.00
+        

@@ -1,0 +1,20 @@
+#Week 8: Information Gain
+
+from collections import Counter
+import math
+
+def entropy(probs):
+    return sum(-prob * math.log(prob, 2) for prob in probs if prob > 0)
+
+def entropy_of_list(a_list):
+    cnt = Counter(a_list)
+    num_instances = len(a_list)
+    probs = [x / num_instances for x in cnt.values()]
+    return entropy(probs)
+
+data = {'Outlook': ['Sunny', 'Rainy'], 'PlayTennis': ['Yes', 'No']}
+target_entropy = entropy_of_list(data['PlayTennis'])
+print(f"Entropy of PlayTennis: {target_entropy:.4f}")
+
+output:-
+Entropy of PlayTennis: 1.0000
