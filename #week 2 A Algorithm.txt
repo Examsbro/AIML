@@ -58,7 +58,7 @@ def heuristic(n):
 Graph_nodes = {
     'A': [('B', 2), ('E', 3)],
     'B': [('C', 1),('G',9)],
-    'C': None
+    'C': 'None',
     'D': [('G', 1)],
     'E': [('D',6)],
 }
