@@ -52,20 +52,21 @@ def get_neighbors(v):
     return None
 
 def heuristic(n):
-    H_dist = {'A': 6, 'B': 4, 'C': 2, 'D': 1, 'E': 0}
+    H_dist = {'A': 11, 'B': 6, 'C': 99, 'D': 1, 'E': 7,'G':0}
     return H_dist[n]
 
 Graph_nodes = {
-    'A': [('B', 1), ('C', 3)],
-    'B': [('D', 3)],
-    'C': [('D', 1), ('E', 5)],
-    'D': [('E', 2)],
+    'A': [('B', 2), ('E', 3)],
+    'B': [('C', 1),('G',9)],
+    'C': None
+    'D': [('G', 1)],
+    'E': [('D',6)],
 }
 
-aStarAlgo('A', 'E')
+aStarAlgo('A', 'G')
         
 
 Output:
 
-Path found: ['A', 'C', 'D', 'E']
-        
+Path found: ['A', 'E', 'D', 'G']
+['A', 'E', 'D', 'G']
