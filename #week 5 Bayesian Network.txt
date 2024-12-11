@@ -57,10 +57,8 @@ def joint_probability(alarm, burglary, earthquake, david_calls, sophia_calls):
         * p_sophia
     )
 result = joint_probability(alarm=True, burglary=False, earthquake=False, david_calls=True, sophia_calls=True)
-print(f"The probability that the alarm has sounded there is neither a buglary nor earthquake and both david 
-        and sophia called harry is : {result:.8f}")
+print(f"The probability that the alarm has sounded there is neither a buglary nor earthquake and both david and sophia called harry is : {result:.8f}")
 Output:
 
-The probability that the alarm has sounded there is neither a buglary nor earthquake and both david and
-sophia called harry is : 0.00068045
+The probability that the alarm has sounded there is neither a buglary nor earthquake and both david and sophia called harry is : 0.00068045
         
