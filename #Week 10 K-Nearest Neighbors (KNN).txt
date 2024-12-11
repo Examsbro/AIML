@@ -1,6 +1,5 @@
 #Week 10: K-Nearest Neighbors (KNN)
 code:
-
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split 
@@ -21,6 +20,12 @@ knn.fit(x_train, y_train)
 y_pred= knn.predict(x_test)
 cm_test = confusion_matrix(y_test, y_pred)
 print("confusion matrix (testdata):\n",cm_test)
+accuracy_test = accuracy_score(y_test, y_pred)
+print("Correct prediction on test data:",accuracy_test)
+print("wrong prediction on test data:",1-accuracy_test)
+y_pred_train= knn.predict(x_train)
+cm_train = confusion_matrix(y_train, y_pred_train)
+print("confusion matrix (training data):\n",cm_train)
 
 output:-
 dataset Keys: dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 'filename', 'data_module'])
@@ -43,3 +48,9 @@ confusion matrix (testdata):
  [[19  0  0]
  [ 0 15  0]
  [ 0  1 15]]
+Correct prediction on test data: 0.98
+wrong prediction on test data: 0.020000000000000018
+confusion matrix (training data):
+ [[31  0  0]
+ [ 0 33  2]
+ [ 0  2 32]]
