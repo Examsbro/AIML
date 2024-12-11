@@ -18,7 +18,7 @@ y = dataset.iloc[:, -1].values
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=1/3, random_state=0)
 regressor = LinearRegression()
 regressor.fit(x_train, y_train)
-print(f"Predicted cost for size 20: {regressor.predict([[20]])[0]}")
+regressor
 y_pred = regressor.predict(x_test)
 df1 = pd.DataFrame({'Actual': y_test, 'Prediction': y_pred})
 print(df1)
@@ -38,7 +38,6 @@ output:
 
 two graphs are the output
 Linear Regression model trained: LinearRegression()
-Predicted cost for pizza of size 20: 28.0
 Comparison of actual vs. predicted values:
    Actual  Prediction
 0      16        16.0
